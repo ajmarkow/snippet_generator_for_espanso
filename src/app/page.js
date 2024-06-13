@@ -15,9 +15,9 @@ export default function Home () {
         <Form
         schema={schema}
         validator={validator}
-        onChange={console.log('changed')}
-        onSubmit={console.log('submitted')}
-          onError={console.log('errors')}
+        onChange={console.log('Formchanged')}
+        onSubmit={console.log(' Formsubmitted')}
+          onError={console.log('Form errors')}
       />
       </Paper>
       </Container>
