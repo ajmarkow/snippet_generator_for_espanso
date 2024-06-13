@@ -1,12 +1,15 @@
 'use client'
 import Form from '@rjsf/mui'
 import validator from '@rjsf/validator-ajv8'
-import { Container } from '@mui/material'
+import { Paper, Container } from '@mui/material'
 const schema = require('../../public/Espanso_Match_Schema.json')
 
 export default function Home () {
   return (
     <Container maxWidth='lg'>
+    <Paper elevation='4'  sx={{
+        padding: '10%',
+      }}  >
       <Form
         schema={schema}
         validator={validator}
@@ -14,6 +17,7 @@ export default function Home () {
         onSubmit={console.log('submitted')}
         onError={console.log('errors')}
       />
-    </Container>
+      </Paper>
+      </Container>
   )
 }

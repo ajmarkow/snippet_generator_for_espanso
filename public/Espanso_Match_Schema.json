@@ -1,6 +1,5 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://ajm.codes/Espanso_Match_Schema.json",
   "title": "Espanso Match Schema",
   "description": "The schema for individual text expansions in a match file, for the open source program Espanso. See https://Espanso.org.",
   "type": "object",
@@ -57,16 +56,8 @@
       "pattern": "(\\[\\[([a-zA-Z0-9!@#$%^&*)(+=._-]{1,25})\\]\\])"
     },
     "passive_only": {
-      "description": "A boolean to set a text expansion so it will only be expanded when using passive mode. Somewhat  & deprecated feature, see https://espanso.org/docs/legacy/passive-mode/.",
-      "type": "boolean",
-      "default": "false"
-    },
-    "global_vars": {
-      "type": "array",
-      "description": "A variable which may be used in many matches, and is not scoped to only a single snippet. See https://espanso.org/docs/matches/basics/#global-variables.",
-      "globalvarItems": {
-        "$ref": "#/vars/items"
-      }
+      "description": "A boolean to set a text expansion so it will only be expanded when using passive mode. Somewhat deprecated feature, see https://espanso.org/docs/legacy/passive-mode/.",
+      "type": "boolean"
     },
     "form_fields": {
       "description": "An object containing properties of your form fields, and the names you use to refer to them.  The object keys are your field name. See https://espanso.org/docs/matches/forms/#controls. I like to prefix all form field names with FF_, in order for them to be consistent and easy to find.  Due to the way this schema is defined, you must always include the type attribute, to specify the specific type of form.",
