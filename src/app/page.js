@@ -7,15 +7,17 @@ const schema = require('../../public/Espanso_Match_Schema.json')
 export default function Home () {
   return (
     <Container maxWidth='lg'>
-    <Paper elevation='4'  sx={{
-        padding: '10%',
+    <Paper elevation='4' sx={{
+        px: '10%',
+        py: '4%',
+        boxShadow: 5
       }}  >
-      <Form
+        <Form
         schema={schema}
         validator={validator}
         onChange={console.log('changed')}
         onSubmit={console.log('submitted')}
-        onError={console.log('errors')}
+          onError={console.log('errors')}
       />
       </Paper>
       </Container>
